@@ -1,0 +1,21 @@
+{
+  "name": "tp3",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ddianapark/tp3-node-modulos#readme",
+  "bugs": {
+    "url": "https://github.com/ddianapark/tp3-node-modulos/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddianapark/tp3-node-modulos.git"
+  },
+  "license": "ISC",
+  "author": "Diana y Jazmin",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
