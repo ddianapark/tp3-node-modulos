@@ -4,3 +4,17 @@ export function readFile(filePath) {
   return fs.promises.readFile(filePath, 'utf-8');
 }
 
+export async function agregarProducto(nombre, precio) {
+  const path = './productos.json';
+  try {
+    const content = await readFile(path);
+    let productos = JSON.parse(content);
+
+    productos.push({ nombre, precio });
+
+    await fs.promises.writeFile(path, JSON.stringify(productos, null, 2), 'utf-8');
+    return (productos);
+  } catch (err) {
+    throw err;
+  }
+}

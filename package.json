@@ -17,5 +17,10 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.20",
+    "fs": "^0.0.1-security",
+    "yoctocolors": "^2.1.2"
   }
 }
