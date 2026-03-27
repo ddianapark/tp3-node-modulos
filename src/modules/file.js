@@ -18,3 +18,22 @@ export async function agregarProducto(nombre, precio) {
     throw err;
   }
 }
+
+export async function buscarProducto(nombre) {
+  const path = './productos.json';
+  const content = await readFile(path);
+  const productos = JSON.parse(content);
+  return productos.find((producto) => producto.nombre === nombre);
+}
+
+export function generarCSV() {
+  const path = './productos.json';
+  return readFile(path).then((content) => {
+      const productos = JSON.parse(content);
+      const csv = productos.map((p) => `${p.nombre},${p.precio}`).join('\n');
+      return csv;
+    })
+    .catch((err) => {
+      throw err;
+    });
+}
